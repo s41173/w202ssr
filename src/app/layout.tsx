@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import QueryProvider from '@/lib/providers/query-provider'
+import SplashScreen from '@/components/SplashScreen';
+import './splash.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -60,10 +62,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${montserrat.variable} font-sans`}
       >
+        
         <QueryProvider>
+          <SplashScreen>
           <Navbar />
           <main>{children}</main>
           <Footer />
+          </SplashScreen>
         </QueryProvider>
       </body>
     </html>

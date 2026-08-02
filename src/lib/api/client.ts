@@ -228,6 +228,7 @@ export interface SliderItem {
   name: string;
   url: string;
   voucher: string | null;
+  splash: string;
 }
 
 export interface Article {
