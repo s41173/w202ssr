@@ -5,12 +5,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 10, 10, 0.8);
+  background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: opacity 0.5s ease, visibility 0.5s ease;
-  padding: 32px 16px; /* ruang aman di semua sisi */
-  overflow-y: auto; /* scroll kalau konten lebih tinggi dari layar */
+  padding: 16px;
+  overflow-y: auto;
 }
 
 .splash-visible {
@@ -31,68 +31,71 @@
 
 .splash-frame {
   position: relative;
-  width: 60vw;
-  max-width: 800px;
-  margin-top: 14px; /* kompensasi tombol close yang nongol ke atas */
-  transform: scale(0.92);
+  width: 90vw;
+  max-width: 440px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.95);
   opacity: 0;
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
   background: #1a1a1a;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7);
 }
 
 .splash-logo-wrapper {
   position: relative;
   width: 100%;
   aspect-ratio: 9 / 16;
+  max-height: calc(85vh - 60px);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #000;
 }
 
 .splash-logo-wrapper img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .splash-caption {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 8px;
   font-family: sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .splash-close-btn {
   position: absolute;
-  top: -14px;
-  right: -14px;
-  z-index: 10;
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  top: -12px;
+  right: -12px;
+  z-index: 20;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  background: #1a1a1a;
+  background: #111;
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-/* .splash-close-btn {
-  top: 8px;
-  right: 8px;
-  background: rgba(0, 0, 0, 0.6);
-} */
-
 .splash-close-btn:hover {
-  background: #2a2a2a;
-  transform: scale(1.05);
+  background: #333;
+  transform: scale(1.1);
 }
