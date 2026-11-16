@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   },
   description:
     'Mercedes-Benz W202 Club Indonesia adalah komunitas pecinta Mercedes-Benz seri W202 di Indonesia.',
+  other: {
+    'google-adsense-account': 'ca-pub-1586411952757444',
+  },
 };
 
 export default function RootLayout({
@@ -54,6 +57,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
+        <meta name="google-adsense-account" content="ca-pub-1586411952757444" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1586411952757444"
